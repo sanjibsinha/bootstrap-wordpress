@@ -16,8 +16,9 @@ function bootstrap_theme_setup() {
 
 add_action('after_setup_theme', 'bootstrap_theme_setup');
 
+// setting up excerpt length
 function set_excerpt_length() {
-    return 20;
+    return 15;
 }
 
 add_filter('excerpt_length', 'set_excerpt_length');
