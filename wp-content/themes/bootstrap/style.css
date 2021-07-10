@@ -56,7 +56,13 @@ Theme Name: Bootstrap
     color: blueviolet;
   }
 
-  
+  .nav-scroller a {
+    color: #666;
+  }
+
+  .nav-scroller a :hover {
+    color: #e5e5e5;
+  }
   
   .card-img-right {
     height: 100%;
@@ -108,3 +114,5 @@ Theme Name: Bootstrap
   .blog-footer p:last-child {
     margin-bottom: 0;
   }
+
+  

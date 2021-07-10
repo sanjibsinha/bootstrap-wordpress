@@ -15,3 +15,9 @@ function bootstrap_theme_setup() {
 }
 
 add_action('after_setup_theme', 'bootstrap_theme_setup');
+
+function set_excerpt_length() {
+    return 20;
+}
+
+add_filter('excerpt_length', 'set_excerpt_length');

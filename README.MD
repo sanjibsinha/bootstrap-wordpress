@@ -1,14 +1,14 @@
-# A WordPress Application from Scratch
+# A WordPress and Bootstrap Application from Scratch
 
-A new WordPress project that will progress step by step.
+A new WordPress project that will progress step by step. It is based on a bootstrap theme.
 
 ## Getting Started
 
 ### Each step is earmarked for a large application. However, it has started from the this repository:
 
-- [Lab: Write your first WordPress app](https://github.com/sanjibsinha/codeschool/tree/main/wp-content/themes/codeschool-theme)
+- [Lab: Write your first WordPress app](https://github.com/sanjibsinha/bootstrap-wordpress/tree/main/wp-content/themes/bootstrap)
 
-### From then on each development will be known as code-one, code-two, etc. Therefore, if you are interested to learn how a WordPress aplication is being developed from scratch, please read this README file of each progress. I'm also writing each progress at my blog: 
+### I'm also writing each progress at my blog: 
 
 [Progress Manual: Follow each progress](https://sanjibsinha.com/category/php/)
 

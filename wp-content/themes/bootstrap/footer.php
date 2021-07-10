@@ -6,6 +6,7 @@
 </footer>
 
 <?php wp_footer(  ); ?>
-    <script src="<?php bloginfo( 'template_url' ) ?>/js/bootstrap.js"></script>
+
+    <script src="<?php bloginfo( 'template_url' ); ?>/js/bootstrap.js"></script>
   </body>
 </html>
