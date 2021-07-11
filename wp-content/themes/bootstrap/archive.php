@@ -1,35 +1,54 @@
 <?php get_header( ); ?>
 <main class="container">
+  <div class="page-banner__content container container--narrow">
+      <h1 class="page-banner__title">
+      <?php
+      /*
+      if (is_author()) {
+          echo "Posts by "; the_author( );
+      }
+      if (is_category()) {
+          single_cat_title( );
+      }
+      */
+      the_archive_title( );
+      ?>
+      </h1>
+      <div class="page-banner__intro">
+        <p><?php the_archive_description( ); ?></p>
+      </div>
+    </div>  
   
   <div class="row g-5">
     <div class="col-md-8">
 
-    <?php while(have_posts()) {
-        the_post(); ?>
-        <h1 class="pb-4 mb-4 fst-italic border-bottom">
-        <?php the_title(); ?>
-      </h1>
-      <p class="blog-post-meta">
-          
-          Posted by 
+    <?php 
+  while (have_posts()) {
+    the_post(); ?>
+    <div class="post-item">
+    <h1 class="headline headline--medium headline--post-title">
+		<?php the_title(); ?></h1>
+    </div>
+    <div class="metabox">
+    <h4>Posted by 
     <?php the_author_posts_link(); ?>
     on
     <?php the_time( 'd.m.y' ) ?>
-    
-    <?php //echo get_the_category_list(', '); ?>
-        </p>
-<p>
-	<?php
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-the_post_thumbnail( 'full' );
-}
-?>
-		</p>
-      <article class="blog-post">
-        <?php the_content(); ?>
-      </article>
+    in
+    <?php echo get_the_category_list(', '); ?>
+    </h4>
+    </div>
+    <div class="generic-content">
+    <?php the_excerpt(); ?>
+    <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">
+    Continue Reading &raquo;</a>    
+    </p><p></p>
+    </div>
 
-    <?php } ?>
+  <?php
+  }
+  echo paginate_links(  );
+  ?>
       
 
       <nav class="blog-pagination" aria-label="Pagination">
@@ -76,6 +95,7 @@ the_post_thumbnail( 'full' );
     </div>
   
 
+	</div>
 </main>
 
 <?php get_footer( ); ?>
